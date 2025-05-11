@@ -1,94 +1,74 @@
-const menuToggle = document.getElementById("menu-toggle");
-const menuClose = document.getElementById("menu-close");
-
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.add("open");
+// Mobile menu toggle
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
 });
 
-menuClose.addEventListener("click", () => {
-  mobileMenu.classList.remove("open");
-});
-
-document.querySelectorAll(" a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
-  });
-});
-
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-  }
-);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-const skillBars = document.querySelectorAll(".skill-progress");
-
-const skillObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const width = entry.target.style.width;
-        entry.target.style.width = "0";
-        setTimeout(() => {
-          entry.target.style.width = width;
-        }, 100);
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-
-skillBars.forEach((bar) => {
-  skillObserver.observe(bar);
-});
-
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
 
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 80,
-        behavior: "smooth",
-      });
-    }
+    // Close mobile menu if open
+    document.getElementById("mobile-menu").classList.add("hidden");
   });
 });
-// Animation au scroll
-const section = document.querySelectorAll('section');
 
-const observers = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
+// Scroll animation
+function checkScroll() {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  elements.forEach((element) => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.2;
+
+    if (elementPosition < screenPosition) {
+      element.classList.add("visible");
     }
   });
-}, { threshold: 0.1 });
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-// Typing animation
-const title = document.querySelector('.gradient-text');
-if (title) {
-  title.style.animation = `typing 3.5s steps(40, end), blink-caret .75s step-end infinite`;
 }
+
+// Initialize skill bars on scroll
+function animateSkillBars() {
+  const skillBars = document.querySelectorAll(".skill-progress");
+  skillBars.forEach((bar) => {
+    const width = bar.style.width;
+    bar.style.width = "0";
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 100);
+  });
+}
+
+// Check on load
+window.addEventListener("load", () => {
+  checkScroll();
+
+  // Only animate skill bars if they're visible
+  const aboutSection = document.getElementById("about");
+  const aboutPosition = aboutSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight;
+
+  if (aboutPosition < screenPosition) {
+    animateSkillBars();
+  }
+});
+
+// Check on scroll
+window.addEventListener("scroll", checkScroll);
+
+// Animate skill bars when about section comes into view
+let skillsAnimated = false;
+window.addEventListener("scroll", () => {
+  const aboutSection = document.getElementById("about");
+  const aboutPosition = aboutSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.5;
+
+  if (aboutPosition < screenPosition && !skillsAnimated) {
+    animateSkillBars();
+    skillsAnimated = true;
+  }
+});

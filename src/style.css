@@ -1,89 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
     --primary: #3b82f6;
     --secondary: #8b5cf6;
-    --dark: #0f172a;
-    --darker: #020617;
 }
 
 body {
-    background-color: var(--darker);
-    color: white;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #f8fafc;
     scroll-behavior: smooth;
-}
-
-.gradient-bg {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 .gradient-text {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 33px;
     color: transparent;
 }
 
-/* navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    /* background: linear-gradient(135deg, var(--primary), var(--secondary)); */
-
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
-nav .logo {
-    text-decoration: none;
-    font-size: 40px;
-    padding: 10px;
-    transition: all 0.3s ease;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
-    font-weight: bold;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.glo {
-    list-style: none;
-    display: flex;
-    justify-content: end;
-    gap: 25px;
-    padding: 10px;
-    transform-style: preserve-3d;
-}
-
-.glo .nav .nav-link {
+.nav-link {
     position: relative;
-    color: #bbbbbb;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
 }
 
-.glo .nav .nav-link::after {
+.nav-link::after {
     content: '';
     position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 5px;
+    width: 0;
     height: 2px;
-    background: #bb46df;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease-in-out 0.2s;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 0.3s ease;
 }
 
-.glo .nav .nav-link:hover::after {
-    transform: scaleX(1);
+.nav-link:hover::after {
+    width: 100%;
 }
-
-.glo .nav .nav-link:hover {
-    color: #8b5cf6;
-
-}
-/* sectio1 */
