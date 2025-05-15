@@ -442,8 +442,7 @@
         <div class="flex flex-col lg:flex-row gap-12">
           <div class="lg:w-1/2 animate-on-scroll">
 
-          
-            <form class="space-y-6" action="send.php" method="post">
+            <form class="space-y-6" action="sed.php" method="post">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label for="name" class="block text-gray-300 mb-2" 
