@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen" >
+  
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg border-b border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-xl font-bold gradient-text">Portfolio</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a href="#home" class="nav-link text-gray-300 hover:text-white"
+                >Home</a
+              >
+              <a href="#about" class="nav-link text-gray-300 hover:text-white"
+                >About</a
+              >
+              <a
+                href="#Events"
+                class="nav-link text-gray-300 hover:text-white"
+                >Events</a
+              >
+              <a
+                href="#projects"
+                class="nav-link text-gray-300 hover:text-white"
+                >Projects</a
+              >
+              <a href="#contact" class="nav-link text-gray-300 hover:text-white"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="menu-toggle"
+              class="text-gray-300 hover:text-white focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+            >Home</a
+          >
+          <a
+            href="#Events"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              Hi, I'm <span class="gradient-text">Wiam</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300">
+               Developer Girl
+            </h2>
+            <p class="text-lg text-gray-400 mb-8 max-w-lg">
+              I’m a dedicated and creative digital student passionate about
+              technology, design, and solving real-world problems. With a
+              background in Physical Sciences and strong technical skills, I
+              love turning ideas into interactive and meaningful digital
+              experiences.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="btn-gradient px-6 py-3 rounded-full font-medium text-white"
+                >Hire Me</a
+              >
+              <a
+                href="#"
+                class="px-6 py-3 rounded-full font-medium border border-gray-700 text-white hover:bg-gray-800 transition"
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center animate-on-scroll">
+            <div class="relative floating">
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 rounded-full gradient-bg flex items-center justify-center"
+              >
+                <img
+                  src="./pics/WhatsApp Image 2025-04-16 at 10.01.50_77636ffb.jpg"
+                  alt="Profile"
+                  class="w-72 h-60 md:w-72 md:h-72 rounded-full object-cover "
+                />
+              </div>
+              <div
+                class="absolute -bottom-5 -right-5 bg-gray-900 rounded-full p-3 shadow-lg"
+              >
+                <div
+                  class="w-14 h-14 rounded-full gradient-bg flex items-center justify-center"
+                >
+                  <i class="fas fa-code text-white text-xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            About <span class="gradient-text">Me</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Hello! I’m a young and motivated developer currently studying at CMC
+            Rabat Salé Kenitra. I specialize in web development, robotics, and
+            creative design.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2 animate-on-scroll">
+            <h3 class="text-2xl font-semibold mb-6">Who I Am</h3>
+            <p class="text-gray-400 mb-6">
+              I'm always eager to learn new technologies, work on exciting
+              projects, and bring innovative ideas to life—especially those that
+              improve everyday life, like my robot for automatic pet feeding.
+            </p>
+            <div class="flex space-x-4">
+              <div class="social-icon">
+                <a
+                  href="https://github.com/wieam-ar"
+                  class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+                >
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+              <div class="social-icon">
+                <a
+                  href="https://www.linkedin.com/in/wiam-aarika-a2977432b/"
+                  class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+                >
+                  <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2 animate-on-scroll">
+            <h3 class="text-2xl font-semibold mb-6">
+              My <span class="gradient-text">Skills</span>
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">PHP</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">React</span>
+                  <span>60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 60%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Tailwind CSS/CSS/HTML</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">JavaScript</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Events & stands  -->
+     <section id="Events" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+         <div class="max-wxl mx-auto">
+            <div >
+              <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center mb-16 animate-on-scroll p-8">
+                Events , Stads & <span class="gradient-text">Competitions</span> 
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+
+             </h2>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                <img src="./pics/agadir.jpg" alt="Agadir">
+                <div class="overlay">Agadir</div>
+                </div>
+                <div class="gallery-item">
+                <img src="./pics/atio.jpg" alt="bilio">
+                <div class="overlay">bilio</div>
+                </div>
+                <div class="gallery-item">
+                <img src="./pics/certif.jpg" alt="Certife">
+                <div class="overlay">Certife Competition Robotique</div>
+                </div>
+                <div class="gallery-item">
+                <video src="./pics/forum.mp4"autoplay muted></video>
+                <div class="overlay">Forum Cmc </div>
+                </div>
+                <div class="gallery-item">
+                <video src="./pics/teaachig.mp4" loop autoplay muted ></video>
+                <div class="overlay">Forum Cmc </div>
+                </div>
+                
+            </div>
+
+
+         </div>
+     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            These projects showcase my skills in frontend development and PHP,
+            where I built responsive interfaces and dynamic web applications
+            with clean, maintainable code.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card rounded-xl overflow-hidden animate-on-scroll">
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="./pics/image1.png"
+                alt="Project 1"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">To Do App</h3>
+                <p class="text-gray-300">Development front and back-end PHP</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+                This To-Do Dashboard was built using PHP, JavaScript, HTML, and
+                CSS. It features task management, active/completed task
+                tracking, and a clean.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >HTML & CSS</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >PHP</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-xl overflow-hidden animate-on-scroll">
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="./pics/image2.png"
+                alt="Project 2"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">
+                  HOME Decorition App
+                </h3>
+                <p class="text-gray-300">Front-End</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+               I designed this web page using HTML and CSS, focusing on a clean and modern aesthetic that highlights the featured collection.
+               The layout is structured with semantic HTML to ensure accessibility and clarity,
+               while custom CSS was used to style elements such as typography, spacing, and responsive alignment. 
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >CSS</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-xl overflow-hidden animate-on-scroll">
+            <div class="relative overflow-hidden h-60">
+              <img
+                src="./pics/image3.png"
+                alt="Project 3"
+                class="w-full h-full object-cover transition duration-500 hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-xl font-semibold text-white mb-2">
+                  Robotique Web site
+                </h3>
+                <p class="text-gray-300">Development front-end</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mb-4">
+                The official website for our Robotics Club, built
+                collaboratively by our team.🤖✨
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300"
+                  >Python</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll">
+          <a
+            href="https://github.com/wieam-ar/"
+            class="inline-flex items-center px-6 py-3 border border-gray-700 rounded-full font-medium text-white hover:bg-gray-800 transition"
+          >
+            View All Projects
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span class="gradient-text">Touch</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Have a project in mind or want to discuss potential opportunities?
+            I'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2 animate-on-scroll">
+
+          
+            <form class="space-y-6" action="send.php" method="post">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-gray-300 mb-2" 
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 rounded-lg focus:outline-none text-white placeholder-gray-500"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 rounded-lg focus:outline-none text-white placeholder-gray-500"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="subject" class="block text-gray-300 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 rounded-lg focus:outline-none text-white placeholder-gray-500"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-gray-300 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg focus:outline-none text-white placeholder-gray-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-gradient px-8 py-4 rounded-full font-medium text-white w-full md:w-auto"
+              >
+                Send Message
+                <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+
+
+          </div>
+
+          <div class="lg:w-1/2 animate-on-scroll">
+            <div class="card rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-semibold mb-6">
+                Contact <span class="gradient-text">Info</span>
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center flex-shrink-0 mr-4"
+                  >
+                    <i class="fas fa-envelope text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300 mb-1">Email</h4>
+                    <a
+                      href="aarikawieam@gmail.com"
+                      class="text-gray-400 hover:text-white transition"
+                      >aarikawieam@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center flex-shrink-0 mr-4"
+                  >
+                    <i class="fas fa-phone-alt text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300 mb-1">Phone</h4>
+                    <a
+                      href="tel:+1234567890"
+                      class="text-gray-400 hover:text-white transition"
+                      >+212 0604804145</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center flex-shrink-0 mr-4"
+                  >
+                    <i class="fas fa-map-marker-alt text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-300 mb-1">Location</h4>
+                    <p class="text-gray-400">Rabat Sale Kenetra</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12">
+                <h4 class="font-medium text-gray-300 mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/wiam-aarika-a2977432b/"
+                    class="social-icon w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://github.com/wieam-ar"
+                    class="social-icon w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900 border-t border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <span class="text-xl font-bold gradient-text">Portfolio</span>
+          </div>
+          <div class="flex space-x-6 mb-6 md:mb-0">
+            <a href="#home" class="text-gray-400 hover:text-white transition"
+              >Home</a
+            >
+            <a href="#about" class="text-gray-400 hover:text-white transition"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-gray-400 hover:text-white transition"
+              >Services</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-400 hover:text-white transition"
+              >Projects</a
+            >
+            <a href="#contact" class="text-gray-400 hover:text-white transition"
+              >Contact</a
+            >
+          </div>
+          <div class="flex space-x-4">
+            <a
+              href="linkedin.com/in/wiam-aarika-a2977432b/"
+              class="social-icon w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="github.com/wieam-ar"
+              class="social-icon w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm"
+        >
+          <p>&copy; 2025 Wiam's Portfolio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/style.js"></script>
+  </body>
+</html>
