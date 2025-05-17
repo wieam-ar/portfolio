@@ -1,5 +1,5 @@
 <?php
-$file = 'cv.pdf'; 
+$file = 'mycv.pdf'; 
 
 if (file_exists($file)) {
     header('Content-Description: File Transfer');

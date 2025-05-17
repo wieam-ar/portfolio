@@ -103,6 +103,7 @@
     </nav>
     <!-- Hero Section -->
     <section id="home" class="hero-pattern pt-44 pb-20 px-4 sm:px-6 lg:px-8">
+      
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
