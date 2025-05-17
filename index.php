@@ -126,7 +126,7 @@
                 >Hire Me</a
               >
               <a
-                href="#"
+                href="./cv/telecharger.php"
                 class="px-6 py-3 rounded-full font-medium border border-gray-700 text-white hover:bg-gray-800 transition"
                 >Download CV</a
               >
