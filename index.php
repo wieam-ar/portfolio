@@ -15,7 +15,7 @@
   
     <!-- Navigation -->
     <nav
-      class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg border-b border-gray-800"
+      class="fixed w-full z-50 bg-black bg-opacity-20 backdrop-filter backdrop-blur-lg border-b border-gray-800"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -102,7 +102,7 @@
       </div>
     </nav>
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section id="home" class="hero-pattern pt-44 pb-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
@@ -252,29 +252,29 @@
             <div >
               <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center mb-16 animate-on-scroll p-8">
                 Events , Stads & <span class="gradient-text">Competitions</span> 
-                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6 mt-5"></div>
 
              </h2>
             </div>
-            <div class="gallery">
-                <div class="gallery-item">
-                <img src="./pics/agadir.jpg" alt="Agadir">
+            <div class="gallery" style="height: 60vh;">
+                <div class="gallery-item " >
+                <img src="./pics/agadir.jpg" alt="Agadir" style="height: 60vh;">
                 <div class="overlay">Agadir</div>
                 </div>
-                <div class="gallery-item">
-                <img src="./pics/atio.jpg" alt="bilio">
+                <div class="gallery-item " style="height: 60vh;">
+                <img src="./pics/atio.jpg" alt="bilio" style="height: 60vh;">
                 <div class="overlay">bilio</div>
                 </div>
-                <div class="gallery-item">
-                <img src="./pics/certif.jpg" alt="Certife">
+                <div class="gallery-item " style="height: 60vh;">
+                <img src="./pics/certif.jpg" alt="Certife" style="height: 60vh;">
                 <div class="overlay">Certife Competition Robotique</div>
                 </div>
-                <div class="gallery-item">
-                <video src="./pics/forum.mp4"autoplay muted></video>
+                <div class="gallery-item " style="height: 60vh; width:auto;">
+                <video src="./pics/forum.mp4" autoplay muted loop style="height: 60vh;"></video>
                 <div class="overlay">Forum Cmc </div>
                 </div>
-                <div class="gallery-item">
-                <video src="./pics/teaachig.mp4" loop autoplay muted ></video>
+                <div class="gallery-item  " style="height: 60vh; width:auto;">
+                <video src="./pics/teaachig.mp4"  autoplay muted loop  style="height: 60vh; "></video>
                 <div class="overlay">Forum Cmc </div>
                 </div>
                 

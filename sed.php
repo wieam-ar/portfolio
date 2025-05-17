@@ -1,43 +1,51 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require 'vendor/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/src/SMTP.php';
 require 'vendor/autoload.php';
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-      
+
+
+$scrollToForm = false;
+
+if (isset($_POST["send"])) {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = nl2br(htmlspecialchars($_POST['message']));
+
+    $body = "
+        <h3>Nom: $name</h3>
+        <h3>Email: $email</h3>
+        <h3>Sujet: $subject</h3>
+        <p>Message:</p>
+        <p>$message</p>
+    ";
+
     $mail = new PHPMailer(true);
 
-try {
-    // Server settings
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';           // Gmail SMTP server
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'wieamaarika@gmail.com';      // Your Gmail address
-    $mail->Password   = 'your_app_password';        // App password, NOT Gmail password
-    $mail->SMTPSecure = 'tls';
-    $mail->Port       = 587;
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'wiamaarika@gmail.com';
+        $mail->Password = 'kvjd quop dzie uoik'; 
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
-    // Recipients
-    $mail->setFrom('test@test.com', 'some');
-    $mail->addAddress('wieamaarika@gmail.com', 'wiam ar');
+        $mail->setFrom('wiamaarika@gmail.com', 'Formulaire Commande');
+        $mail->addAddress('wiamaarika@gmail.com');
 
-    // Content
-    $mail->isHTML(true);
-    $mail->Subject = 'Test Email with PHPMailer';
-    $mail->Body    = "name:" . $name . "email" . $email."subject" . $subject . "message" . $message;
-    $mail->AltBody = 'This is a plain-text version of the message.';
+        $mail->isHTML(true);
+        $mail->Subject = 'Nouvelle commande client';
+        $mail->Body = $body;
 
-    $mail->send();
-    echo 'Email has been sent successfully.';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $mail->send();
+        echo "Message envoyé !";
+    } catch (Exception $e) {
+        echo "Message non envoyé. Erreur: {$mail->ErrorInfo}";
+    }
 }
-}
-
 ?>
